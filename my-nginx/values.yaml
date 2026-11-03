@@ -1,0 +1,16 @@
+replicaCount: 2
+
+image: 
+  repository: nginx
+  tag: "1.28.0"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  storageClassName: ""

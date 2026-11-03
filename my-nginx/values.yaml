@@ -1,14 +1,11 @@
 replicaCount: 2
-
-image: 
+image:
   repository: nginx
-  tag: "1.28.0"
+  tag: "1.30.6"
   pullPolicy: IfNotPresent
-
 service:
   type: ClusterIP
   port: 80
-
 persistence:
   enabled: true
   accessMode: ReadWriteOnce
